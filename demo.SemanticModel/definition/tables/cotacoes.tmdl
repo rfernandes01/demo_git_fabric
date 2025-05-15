@@ -1,8 +1,17 @@
 table cotacoes
 	lineageTag: a7a73eb9-1a11-4ae7-911f-bae724b5ef35
 
+	measure 'Cotação do dia' = ```
+			AVERAGE(cotacoes[Cotacao]) 
+			```
+		displayFolder: Medidas
+		lineageTag: 63eb66a1-e129-4e4a-a261-19af4949daf2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Moeda
 		dataType: string
+		displayFolder: Colunas
 		lineageTag: 52b219f3-f068-46fa-9b63-eee395e5cb10
 		summarizeBy: none
 		sourceColumn: Moeda
@@ -12,6 +21,7 @@ table cotacoes
 	column DataHora
 		dataType: dateTime
 		formatString: General Date
+		displayFolder: Colunas
 		lineageTag: 7ee4c886-3d1e-4419-b844-cabbc958f1f5
 		summarizeBy: none
 		sourceColumn: DataHora
@@ -20,6 +30,7 @@ table cotacoes
 
 	column Cotacao
 		dataType: double
+		displayFolder: Colunas
 		lineageTag: 2eac2ba5-72a4-4f30-8ed6-a3ece4863d96
 		summarizeBy: average
 		sourceColumn: Cotacao
@@ -30,6 +41,7 @@ table cotacoes
 
 	column TipoBoletim
 		dataType: string
+		displayFolder: Colunas
 		lineageTag: b4447676-a87d-4d75-be81-92138487f706
 		summarizeBy: none
 		sourceColumn: TipoBoletim
@@ -39,6 +51,7 @@ table cotacoes
 	column Data
 		dataType: dateTime
 		formatString: dd/mm/yy
+		displayFolder: Colunas
 		lineageTag: 8c4899fe-b9c4-4d50-a474-fdabcb29ab4c
 		summarizeBy: none
 		sourceColumn: Data
